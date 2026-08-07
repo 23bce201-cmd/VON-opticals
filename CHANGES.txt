@@ -1,0 +1,59 @@
+CHANGES
+
+improve animations & visuals 
+improve responsive page because it is over lapping
+put landing page animation of our company logo
+
+
+ Homepage :
+
+1. navbar should be navy blue
+2. don't make appointment or booking forms so remove that 
+3. I want special animation where small black particals  combines into meta ai specs 
+
+Menu bar :hamburger menu is not visible
+custom sequence
+1.Home
+2.Frames 
+3.Sunglasses
+4.Contact Lens
+5.Prescription Glasses
+6.Services
+7.Visit Us
+
+
+Frames :
+
+1. we are not making a shopping site im just acknowledging the brands that we have have for frames and sunglasses.
+2.use the company logo for Prada, burberry ,Bvlgari, Ray-Ban ,Oakley, Micheal Kors ,coach, silhouette ,Hublot, Mont Blanc ,maui jim , tommy Hilfiger, Calvin Klein, saint Laurent, YSL, Carrera, marc Jacobs, tom Ford, david beckham, cutler and gross, dolce & Gabbana, dita,
+3. also available for kids
+
+Sunglasses :
+
+1.use the company logo for Prada, burberry ,Bvlgari, Ray-Ban ,Oakley, Micheal Kors ,coach, silhouette ,Hublot, Mont Blanc ,maui jim , tommy Hilfiger, Calvin Klein, saint Laurent, YSL, Carrera, marc Jacobs, tom Ford, david beckham, cutler and gross, dolce & Gabbana, dita
+2.also available for kids
+3. we are not making a shopping site im just acknowledging the brands that we have have for frames and sunglasses.
+
+
+
+ Contact lenses :
+
+1. use the company logo for bausch and lomb, alcon, cooper vision, johnson and Johnson 
+
+Meta AI Glasses :
+
+ 1. in the specs photo of meta ai the backgroung should be white 
+2. put the meta ai photos of rayban and oakely
+
+Services :
+
+1.reading glasses
+2.computerised eye check up
+3.repairing work - 1to 2 days
+
+visit us :
+ 1.provide google map link of our address : Von Opticals, 4 Pramukh Plaza, Polytechnic Road, Opposite Ketav Petrol Pump, Ambawadi, Ahmedabad, Gujarat 380015
+https://maps.app.goo.gl/qx9pbyBiud7KHF916
+
+
+
