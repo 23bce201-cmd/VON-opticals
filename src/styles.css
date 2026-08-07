@@ -101,31 +101,15 @@ img {
   }
 
   .brand-masonry {
-    column-count: 1;
-    column-gap: 1rem;
+    @apply grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5;
   }
 
   .brand-masonry-item {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1rem;
-    break-inside: avoid;
+    @apply h-full;
   }
 
   .masonry-logo-card {
-    min-height: 150px;
-  }
-
-  .masonry-logo-card-compact {
-    min-height: 128px;
-  }
-
-  .masonry-logo-card-tall {
-    min-height: 210px;
-  }
-
-  .masonry-logo-card-wide {
-    min-height: 178px;
+    @apply h-full min-h-[150px];
   }
 
   .brand-logo-frame {
@@ -545,23 +529,7 @@ img {
   }
 }
 
-@media (min-width: 640px) {
-  .brand-masonry {
-    column-count: 2;
-  }
-}
 
-@media (min-width: 1024px) {
-  .brand-masonry {
-    column-count: 4;
-  }
-}
-
-@media (min-width: 1280px) {
-  .brand-masonry {
-    column-count: 5;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   *,

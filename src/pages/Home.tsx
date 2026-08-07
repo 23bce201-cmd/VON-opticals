@@ -6,6 +6,7 @@ import MetaGlassesSection from "../components/MetaGlassesSection";
 import TrustBar from "../components/TrustBar";
 import WhyVon from "../components/WhyVon";
 import StoreLocator from "../components/StoreLocator";
+import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 
 export default function Home() {
@@ -18,16 +19,16 @@ export default function Home() {
       <ContactLensSection />
       <MetaGlassesSection />
       <WhyVon />
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-von-mist/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Visit Us"
             title="Find VON Optical in Ambawadi, Ahmedabad."
             copy="Visit the store for frames, sunglasses, prescription glasses, contact lenses, repairs, and computerised eye check up."
           />
-          <div className="mt-10">
+          <Reveal className="mt-10" delay={100}>
             <StoreLocator />
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

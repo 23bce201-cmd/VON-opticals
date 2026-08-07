@@ -16,19 +16,12 @@ function brandClassName(name: string) {
   return "font-semibold";
 }
 
-function masonrySizeClass(index: number) {
-  if (index % 9 === 0) return "masonry-logo-card-tall";
-  if (index % 5 === 0) return "masonry-logo-card-wide";
-  if (index % 4 === 0) return "masonry-logo-card-compact";
-  return "";
-}
-
 export default function BrandLogoGrid({ brands, includeKids = false }: BrandLogoGridProps) {
   return (
     <div className="brand-masonry">
       {brands.map((brand, index) => (
         <Reveal key={brand} className="brand-masonry-item" delay={index < 12 ? index * 45 : 0}>
-          <article className={`logo-card masonry-logo-card ${masonrySizeClass(index)}`}>
+          <article className="logo-card masonry-logo-card">
             {getBrandLogoUrl(brand) ? (
               <>
                 <div className="brand-logo-frame">
@@ -44,7 +37,7 @@ export default function BrandLogoGrid({ brands, includeKids = false }: BrandLogo
       ))}
       {includeKids && (
         <Reveal className="brand-masonry-item" delay={brands.length * 30}>
-          <article className="logo-card masonry-logo-card masonry-logo-card-wide border-von-blue-500 bg-von-blue-100">
+          <article className="logo-card masonry-logo-card border-von-blue-500 bg-von-blue-100">
             <p className="wordmark">Kids Collection</p>
             <p className="mt-4 text-sm font-semibold leading-6 text-von-blue-900">
               Child-friendly frame and sunglass options are also available in store.
