@@ -18,16 +18,16 @@ function brandClassName(name: string) {
 
 export default function BrandLogoGrid({ brands, includeKids = false }: BrandLogoGridProps) {
   return (
-    <div className="brand-masonry">
+    <div className="brand-masonry border-l-2 border-t-2 border-von-blue-900">
       {brands.map((brand, index) => (
         <Reveal key={brand} className="brand-masonry-item" delay={index < 12 ? index * 45 : 0}>
-          <article className="logo-card masonry-logo-card">
+          <article className="logo-card masonry-logo-card group -ml-0.5 -mt-0.5 transition-all duration-200 hover:shadow-[0_8px_30px_rgba(37,58,121,0.15)] hover:-translate-y-1">
             {getBrandLogoUrl(brand) ? (
               <>
-                <div className="brand-logo-frame">
+                <div className="brand-logo-frame group-hover:border-white transition-colors duration-150">
                   <img src={getBrandLogoUrl(brand) ?? undefined} alt={`${brand} logo`} className="brand-logo-img" />
                 </div>
-                <p className="mt-4 text-center text-sm font-bold text-von-blue-900">{brand}</p>
+                <p className="mt-4 text-left text-xs font-black uppercase tracking-[0.18em] text-current">{brand}</p>
               </>
             ) : (
               <p className={`wordmark ${brandClassName(brand)}`}>{brand}</p>
@@ -37,9 +37,9 @@ export default function BrandLogoGrid({ brands, includeKids = false }: BrandLogo
       ))}
       {includeKids && (
         <Reveal className="brand-masonry-item" delay={brands.length * 30}>
-          <article className="logo-card masonry-logo-card border-von-blue-500 bg-von-blue-100">
+          <article className="logo-card masonry-logo-card -ml-0.5 -mt-0.5 border-von-blue-500 bg-von-mist swiss-diagonal">
             <p className="wordmark">Kids Collection</p>
-            <p className="mt-4 text-sm font-semibold leading-6 text-von-blue-900">
+            <p className="mt-4 text-sm font-bold leading-6 text-current">
               Child-friendly frame and sunglass options are also available in store.
             </p>
           </article>

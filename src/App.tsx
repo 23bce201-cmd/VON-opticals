@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ContactLenses from "./pages/ContactLenses";
 import Frames from "./pages/Frames";
+import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import Lenses from "./pages/Lenses";
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/contact-lens" element={<ContactLenses />} />
             <Route path="/meta-glasses" element={<MetaGlasses />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/visit-us" element={<VisitUs />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

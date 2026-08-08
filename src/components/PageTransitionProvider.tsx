@@ -1,5 +1,6 @@
 import { createContext, PropsWithChildren, useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoUrl from "../photos/logoNoBG.png";
 
 type PageTransitionContextValue = {
   navigateWithTransition: (href: string, direction?: "left" | "right") => void;
@@ -30,7 +31,9 @@ export function PageTransitionProvider({ children }: PropsWithChildren) {
   return (
     <PageTransitionContext.Provider value={value}>
       {children}
-      <div className={`page-slide-overlay ${phase ? `page-slide-overlay-${phase}-${direction}` : ""}`} />
+      <div className={`page-slide-overlay ${phase ? `page-slide-overlay-${phase}-${direction}` : ""}`}>
+        <img src={logoUrl} alt="" className="page-slide-logo" />
+      </div>
     </PageTransitionContext.Provider>
   );
 }

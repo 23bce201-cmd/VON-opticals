@@ -19,8 +19,8 @@ export default function Home() {
       <ContactLensSection />
       <MetaGlassesSection />
       <WhyVon />
-      <section className="section-pad bg-von-mist/40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="section-pad bg-von-mist swiss-grid-pattern">
+        <div className="container-wide">
           <SectionHeading
             eyebrow="Visit Us"
             title="Find VON Optical in Ambawadi, Ahmedabad."

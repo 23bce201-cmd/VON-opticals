@@ -9,15 +9,15 @@ export default function CategoryTabs({ active, onChange }: CategoryTabsProps) {
   const categories = ["All", ...frameBrandCategories];
 
   return (
-    <div className="flex flex-wrap gap-2 pb-2" role="tablist" aria-label="Frame categories">
+    <div className="flex flex-wrap gap-4 border-l-2 border-t-2 border-von-blue-900 pb-2" role="tablist" aria-label="Frame categories">
       {categories.map((category) => (
         <button
           key={category}
           type="button"
           role="tab"
           aria-selected={active === category}
-          className={`focus-ring min-h-11 shrink-0 rounded-full border px-5 text-sm font-bold transition ${
-            active === category ? "border-von-blue-900 bg-von-blue-900 text-white" : "border-von-blue-100 bg-white text-von-blue-900 hover:border-von-blue-500"
+          className={`focus-ring -ml-0.5 -mt-0.5 min-h-12 shrink-0 border-2 border-von-blue-900 px-5 text-xs font-black uppercase tracking-[0.18em] transition-all duration-200 ${
+            active === category ? "bg-von-blue-900 text-white" : "bg-white text-von-blue-900 hover:bg-von-accent hover:text-white hover:border-von-accent hover:shadow-[0_8px_30px_rgba(255,74,28,0.3)]"
           }`}
           onClick={() => onChange(category)}
         >

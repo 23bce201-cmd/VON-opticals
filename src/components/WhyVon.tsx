@@ -28,23 +28,26 @@ const values = [
 export default function WhyVon() {
   return (
     <section className="section-pad bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Why VON Optical"
-          title="Boutique selection with clinical discipline."
-          copy="The experience is deliberately calm: no rushed dispensing, no vague lens promises, and no pressure to choose a frame before the prescription and fit make sense."
-          align="center"
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {values.map((value, index) => (
-            <Reveal key={value.title} delay={index * 90} className="rounded-md border border-von-blue-100 bg-von-mist p-6">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-von-blue-900">
-                <value.icon size={22} />
-              </span>
-              <h3 className="mt-5 font-display text-xl font-semibold text-von-blue-900">{value.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-von-ink/70">{value.copy}</p>
-            </Reveal>
-          ))}
+      <div className="container-wide">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Why VON Optical"
+            title="Boutique selection with clinical discipline."
+            copy="The experience is deliberately calm: no rushed dispensing, no vague lens promises, and no pressure to choose a frame before the prescription and fit make sense."
+            align="center"
+          />
+          <div className="mt-12 grid gap-4 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-2 xl:grid-cols-4">
+            {values.map((value, index) => (
+              <Reveal key={value.title} delay={index * 90} className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-von-mist p-6 transition-all duration-200 hover:bg-von-accent hover:text-white hover:shadow-[0_12px_40px_rgba(255,74,28,0.3)] hover:-translate-y-1">
+                <span className="inline-flex h-14 w-14 items-center justify-center border-2 border-von-blue-900 bg-white text-von-blue-900 group-hover:border-white transition-all duration-200">
+                  <value.icon size={22} strokeWidth={2.5} />
+                </span>
+                <p className="mt-6 swiss-number group-hover:text-white">0{index + 1}. Advantage</p>
+                <h3 className="mt-3 font-display text-2xl font-black uppercase leading-none text-current">{value.title}</h3>
+                <p className="mt-4 text-sm font-medium leading-6 text-von-blue-900/70 group-hover:text-white/85">{value.copy}</p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

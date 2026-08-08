@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import BrandLogoGrid from "../components/BrandLogoGrid";
+import BrandModelShowcase from "../components/BrandModelShowcase";
+import BrandProductShowcase from "../components/BrandProductShowcase";
 import CategoryTabs from "../components/CategoryTabs";
 import Reveal from "../components/Reveal";
 import { eyewearBrandNames, frameBrands } from "../data/frameBrands";
-import shop2Image from "../photos/shop2.jpeg";
+import shop2Image from "../photos/shop/shop1.jpeg";
 
 export default function Frames() {
   const [searchParams] = useSearchParams();
@@ -18,25 +20,28 @@ export default function Frames() {
   }, [activeCategory, selectedBrand]);
 
   return (
-    <section className="page-pad bg-von-mist">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="page-pad bg-von-mist swiss-grid-pattern">
+      <div className="container-wide">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
           <Reveal>
             <p className="section-eyebrow">Frames</p>
             <h1 className="page-title">Frame brands available at VON Optical.</h1>
             <p className="mt-5 text-lg leading-8 text-von-ink/70">
-              This page acknowledges the designer, performance, and luxury frame brands available in store. It is not an online shopping catalogue.
+              Gallery of the world's most coveted eyewear names — where fashion, craft, and optical science meet on our shelves.
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <img src={shop2Image} alt="VON Optical frame display" className="max-h-[560px] w-full rounded-md object-contain shadow-soft" />
+            <img src={shop2Image} alt="VON Optical frame display" className="w-full max-h-[560px] border-4 border-von-blue-900 bg-white object-contain p-3 " />
           </Reveal>
         </div>
+
+        <BrandModelShowcase />
+        <BrandProductShowcase />
 
         <div className="mt-8">
           <CategoryTabs active={selectedBrand ? "All" : activeCategory} onChange={setActiveCategory} />
           {selectedBrand && (
-            <Link to="/frames" className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-von-blue-700 hover:text-von-blue-900">
+            <Link to="/frames" className="mt-4 inline-flex min-h-12 items-center border-2 border-von-blue-900 bg-white px-4 text-xs font-black uppercase tracking-[0.18em] text-von-blue-900 hover:bg-von-blue-900 hover:text-white">
               Clear brand filter
             </Link>
           )}
