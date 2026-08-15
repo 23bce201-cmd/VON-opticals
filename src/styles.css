@@ -45,6 +45,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Consistent Solid Orange Custom Cursor with Navy Blue Border Line */
+*, html, body, a, button, [role="button"], input, select, textarea, label, .btn-primary, .btn-secondary, .link-pill, .brand-card, .logo-card, [tabindex] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M 3 3 L 16 37 L 22 22 L 37 16 Z' fill='%23FF4A1C' stroke='%23253A79' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") 3 3, auto !important;
+}
+
+
+
+
 body::before {
   position: fixed;
   inset: 0;

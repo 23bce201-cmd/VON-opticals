@@ -42,7 +42,7 @@ export default function Navbar() {
               end={item.href === "/home"}
               onClick={(event) => goTo(event, item.href)}
               className={({ isActive }) =>
-                `focus-ring relative flex h-full flex-1 items-center justify-center border-r-2 border-white px-2 text-[11px] font-black uppercase tracking-[0.13em] transition duration-150 last:border-r-0 ${
+                `focus-ring relative flex h-full flex-1 items-center justify-center border-r-2 border-white px-1.5 2xl:px-2 text-[10px] 2xl:text-[11px] font-black uppercase tracking-[0.1em] transition duration-150 last:border-r-0 ${
                   isActive ? "bg-white text-von-blue-900" : "text-white hover:bg-von-accent hover:text-white"
                 }`
               }

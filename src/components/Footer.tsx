@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-full">
         <div className="mx-auto grid max-w-7xl gap-0 px-4 py-6 sm:px-6 lg:grid-cols-[0.85fr_1.15fr_auto] lg:items-stretch lg:px-8">
           <div className="p-6">
-            <img src={logoUrl} alt="VON Optical" className="h-10 w-auto object-contain " />
+            <img src={logoUrl} alt="VON Optical" className="h-20 sm:h-24 w-auto object-contain transition-transform duration-200 hover:scale-105" />
             <p className="mt-5 max-w-sm text-sm font-medium leading-6 text-white/70">
               Premium eyewear, contact lenses, repairs, and computerised eye check up.
             </p>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { usePageTransition } from "../components/PageTransitionProvider";
-import logoUrl from "../photos/logoNoBG.png";
+import logoUrl from "../photos/bluelogoNoBG.png";
 
 export default function Landing() {
   const { navigateWithTransition } = usePageTransition();
@@ -18,7 +18,6 @@ export default function Landing() {
           <div className="splash-orbit" />
           <img src={logoUrl} alt="VON Optical" className="splash-logo" />
         </div>
-        <span className="splash-wordmark">VON Optical</span>
         <div className="splash-loader" role="progressbar" aria-label="Loading VON Optical">
           <div className="splash-loader-bar" />
         </div>
