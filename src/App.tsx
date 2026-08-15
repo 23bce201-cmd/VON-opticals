@@ -1,15 +1,17 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import PageArrows from "./components/PageArrows";
 import { PageTransitionProvider } from "./components/PageTransitionProvider";
+import SplashScreen from "./components/SplashScreen";
+import CustomCursor from "./components/CustomCursor";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ContactLenses from "./pages/ContactLenses";
 import Frames from "./pages/Frames";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
-import Landing from "./pages/Landing";
 import Lenses from "./pages/Lenses";
 import MetaGlasses from "./pages/MetaGlasses";
 import PrescriptionGlasses from "./pages/PrescriptionGlasses";
@@ -19,15 +21,22 @@ import VisitUs from "./pages/VisitUs";
 
 export default function App() {
   const location = useLocation();
-  const isLanding = location.pathname === "/";
+  const [showSplash, setShowSplash] = useState(() => window.location.pathname === "/");
+
+  useEffect(() => {
+    if (showSplash) {
+      const t = setTimeout(() => setShowSplash(false), 4000);
+      return () => clearTimeout(t);
+    }
+  }, [showSplash]);
 
   return (
     <div className="min-h-screen bg-white text-von-ink">
       <PageTransitionProvider>
-        {!isLanding && <Navbar />}
-        <main key={location.pathname} className={isLanding ? "" : "route-page"}>
+        <Navbar />
+        <main key={location.pathname === "/" ? "/home" : location.pathname} className="route-page">
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/frames" element={<Frames />} />
             <Route path="/sunglasses" element={<Sunglasses />} />
@@ -44,8 +53,10 @@ export default function App() {
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </main>
-        {!isLanding && <PageArrows />}
-        {!isLanding && <Footer />}
+        <PageArrows />
+        <Footer />
+        <CustomCursor />
+        {showSplash && <SplashScreen />}
       </PageTransitionProvider>
     </div>
   );

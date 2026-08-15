@@ -46,11 +46,13 @@ body {
 }
 
 /* Consistent Solid Orange Custom Cursor with Navy Blue Border Line */
-*, html, body, a, button, [role="button"], input, select, textarea, label, .btn-primary, .btn-secondary, .link-pill, .brand-card, .logo-card, [tabindex] {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M 3 3 L 16 37 L 22 22 L 37 16 Z' fill='%23FF4A1C' stroke='%23253A79' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") 3 3, auto !important;
+/* Applied only on pointer-capable devices (not touch/mobile) */
+@media (hover: hover) and (pointer: fine) {
+  *, html, body, a, button, [role="button"], input, select, textarea, label,
+  .btn-primary, .btn-secondary, .link-pill, .brand-card, .logo-card, [tabindex] {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M 3 3 L 16 37 L 22 22 L 37 16 Z' fill='%23FF4A1C' stroke='%23253A79' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E") 3 3, auto !important;
+  }
 }
-
-
 
 
 body::before {
@@ -209,142 +211,6 @@ img {
 
   .section-copy {
     @apply mt-6 max-w-2xl border-l-4 border-von-blue-900 pl-5 text-base font-medium leading-7 text-von-blue-900/70 sm:text-lg sm:leading-8;
-  }
-}
-
-.splash-screen {
-  position: relative;
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.splash-wash {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(37, 58, 121, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 58, 121, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-.splash-content {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 32px;
-  text-align: center;
-}
-
-.splash-logo-wrap {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.splash-logo {
-  width: min(240px, 58vw);
-  height: auto;
-  object-fit: contain;
-  animation: splashLogo 4.3s ease-in-out both;
-  transform-origin: center;
-}
-
-.splash-orbit {
-  position: absolute;
-  inset: -24px;
-  border: 2px solid rgba(37, 99, 199, 0.7);
-  opacity: 0;
-  animation: splashOrbitIn 0.9s ease-out 0.45s forwards, logoOrbit 10s linear 0.45s infinite;
-}
-
-.splash-orbit::after {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  content: "";
-  background: var(--von-accent);
-  box-shadow: 0 0 0 1px rgba(8, 8, 8, 0.02);
-}
-
-.splash-wordmark {
-  color: var(--von-blue-900);
-  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
-  font-weight: 900;
-  letter-spacing: 0.55em;
-  text-transform: uppercase;
-  animation: splashWordmark 1.2s ease-out 0.35s both;
-}
-
-.splash-loader {
-  width: min(280px, 66vw);
-  height: 4px;
-  overflow: hidden;
-  background: rgba(37, 58, 121, 0.14);
-}
-
-.splash-loader-bar {
-  height: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: linear-gradient(90deg, var(--von-blue-900), var(--von-blue-700), var(--von-accent));
-  animation: splashLoad 4.1s cubic-bezier(0.45, 0.05, 0.35, 0.95) 0.2s forwards;
-}
-
-@keyframes splashLogo {
-  0% {
-    opacity: 0;
-    transform: scale(0.86);
-    filter: blur(6px);
-  }
-  18%,
-  82% {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(0.97);
-    filter: blur(0);
-  }
-}
-
-@keyframes splashOrbitIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes splashWordmark {
-  from {
-    opacity: 0;
-    letter-spacing: 0.9em;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 0.55em;
-    transform: translateY(0);
-  }
-}
-
-@keyframes splashLoad {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
   }
 }
 
