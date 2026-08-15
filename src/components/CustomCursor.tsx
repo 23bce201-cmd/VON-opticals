@@ -107,8 +107,6 @@ export default function CustomCursor() {
           .cursor-ring, .cursor-dot { display: none; }
         }
       `}</style>
-      <div ref={ringRef} className="cursor-ring" />
-      <div ref={dotRef} className="cursor-dot" />
     </>
   );
 }
