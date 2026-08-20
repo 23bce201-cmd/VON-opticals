@@ -23,9 +23,6 @@ export default function StoreLocator() {
         <div className="flex flex-col justify-between border-b-4 border-von-blue-900 bg-white p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r-4">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-3 border-b-4 border-von-blue-900 pb-5">
-              <span className="border-2 border-von-blue-900 bg-von-mist px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-von-blue-900">
-                Open 10 AM - 8 PM
-              </span>
               <span className="text-xs font-black uppercase tracking-[0.18em] text-von-accent">Ambawadi</span>
             </div>
 
@@ -46,9 +43,9 @@ export default function StoreLocator() {
               </div>
             </div>
 
-            <div className="mt-6 border-l-2 border-t-2 border-von-blue-900">
+            <div className="mt-6 grid gap-2">
               {contactRows.map((row) => (
-                <div key={row.label} className="-ml-0.5 -mt-0.5 grid grid-cols-[3.25rem_1fr] border-2 border-von-blue-900 bg-white">
+                <div key={row.label} className="grid grid-cols-[3.25rem_1fr] border-2 border-von-blue-900 bg-white">
                   <span className="flex min-h-16 items-center justify-center border-r-2 border-von-blue-900 bg-von-mist text-von-blue-900">
                     <row.icon size={20} strokeWidth={2.5} />
                   </span>

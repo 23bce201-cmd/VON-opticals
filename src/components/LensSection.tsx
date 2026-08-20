@@ -51,9 +51,9 @@ export default function LensSection({ compact = false }: LensSectionProps) {
           </Reveal>
 
           {!compact && (
-            <div className="mt-8 grid gap-4 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-3">
+            <div className="mt-8 grid gap-3 md:grid-cols-3">
               {["Anti-glare and scratch-resistant coatings", "Blue-light and office lens recommendations", "Progressive, single-vision, and high-index fitting"].map((item) => (
-                <Reveal key={item} className="-ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-5 text-sm font-black uppercase leading-6 tracking-[0.08em] text-von-blue-900">
+                <Reveal key={item} className="border-2 border-von-blue-900 bg-white p-5 text-sm font-black uppercase leading-6 tracking-[0.08em] text-von-blue-900">
                   {item}
                 </Reveal>
               ))}

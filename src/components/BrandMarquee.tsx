@@ -34,30 +34,36 @@ export default function BrandMarquee({ compact = false }: BrandMarqueeProps) {
           <div className="mt-12 space-y-12">
             {frameBrandCategories.map((category, shelfIndex) => {
               const brands = frameBrands.filter((brand) => brand.category === category);
+              const isBordered = shelfIndex >= 1; // 03. Sport & Performance
               return (
                 <Reveal key={category} delay={shelfIndex * 120}>
-                  <div className="mb-0 flex items-end justify-between gap-4 border-4 border-b-0 border-von-blue-900 bg-white p-5">
-                    <div>
-                      <p className="swiss-number">{String(shelfIndex + 2).padStart(2, "0")}. Category</p>
-                      <h3 className="mt-2 font-display text-3xl font-black uppercase leading-none text-von-blue-900 sm:text-5xl">{category}</h3>
+                  <div
+                    className={`bg-white p-6 sm:p-8 ${
+                      isBordered ? "border-4 border-von-blue-900" : ""
+                    }`}
+                  >
+                    <div className="mb-6 flex items-end justify-between gap-4 border-b-4 border-von-blue-900 pb-5">
+                      <div>
+                        <p className="swiss-number">{String(shelfIndex + 2).padStart(2, "0")}. Category</p>
+                        <h3 className="mt-2 font-display text-3xl font-black uppercase leading-none text-von-blue-900 sm:text-5xl">{category}</h3>
+                      </div>
                     </div>
-                    <span className="border-2 border-von-blue-900 px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-von-blue-900">{brands.length} brands</span>
-                  </div>
-                  <div className="brand-masonry border-l-2 border-t-2 border-von-blue-900">
-                    {brands.map((brand, index) => (
-                      <Reveal key={brand.name} className="brand-masonry-item" delay={index < 8 ? index * 45 : 0}>
-                        <article className="logo-card masonry-logo-card group -ml-0.5 -mt-0.5 transition-all duration-200 hover:shadow-[0_8px_30px_rgba(37,58,121,0.15)] hover:-translate-y-1">
-                          {getBrandLogoUrl(brand.name) ? (
-                            <div className="brand-logo-frame group-hover:border-white transition-colors duration-150">
-                              <img src={getBrandLogoUrl(brand.name) ?? undefined} alt={`${brand.name} logo`} className="brand-logo-img" />
-                            </div>
-                          ) : (
-                            <p className="wordmark">{brand.name}</p>
-                          )}
-                          <p className="mt-3 min-h-16 text-sm font-medium leading-6 text-von-blue-900/70 group-hover:text-white/85">{brand.tagline}</p>
-                        </article>
-                      </Reveal>
-                    ))}
+                    <div className="brand-masonry gap-4">
+                      {brands.map((brand, index) => (
+                        <Reveal key={brand.name} className="brand-masonry-item" delay={index < 8 ? index * 45 : 0}>
+                          <article className="logo-card masonry-logo-card group transition-all duration-200 hover:shadow-[0_8px_30px_rgba(37,58,121,0.15)] hover:-translate-y-1">
+                            {getBrandLogoUrl(brand.name) ? (
+                              <div className="brand-logo-frame group-hover:border-white transition-colors duration-150">
+                                <img src={getBrandLogoUrl(brand.name) ?? undefined} alt={`${brand.name} logo`} className="brand-logo-img" />
+                              </div>
+                            ) : (
+                              <p className="wordmark">{brand.name}</p>
+                            )}
+                            <p className="mt-3 min-h-16 text-sm font-medium leading-6 text-von-blue-900/70 group-hover:text-white/85">{brand.tagline}</p>
+                          </article>
+                        </Reveal>
+                      ))}
+                    </div>
                   </div>
                 </Reveal>
               );

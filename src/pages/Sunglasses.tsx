@@ -3,13 +3,13 @@ import BrandModelShowcase from "../components/BrandModelShowcase";
 import BrandProductShowcase from "../components/BrandProductShowcase";
 import Reveal from "../components/Reveal";
 import { eyewearBrandNames } from "../data/frameBrands";
-import sunglassImage from "../photos/shop/shop3.jpeg";
+import shop2Image from "../photos/shop/shop2.jpeg";
 
 export default function Sunglasses() {
   return (
     <section className="page-pad bg-von-mist swiss-grid-pattern">
       <div className="container-wide">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
           <Reveal>
             <p className="section-eyebrow">Sunglasses</p>
             <h1 className="page-title">Premium sunglasses from international eyewear houses.</h1>
@@ -18,11 +18,17 @@ export default function Sunglasses() {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <img src={sunglassImage} alt="Premium eyewear display at VON Optical" className="aspect-[16/10] w-full border-4 border-von-blue-900 object-contain " />
+            <div className="border-4 border-von-blue-900 bg-white p-2 shadow-2xl">
+              <img
+                src={shop2Image}
+                alt="Premium sunglasses display at VON Optical"
+                className="w-full aspect-[4/3] min-h-[380px] object-cover sm:min-h-[460px] lg:min-h-[520px]"
+              />
+            </div>
           </Reveal>
         </div>
-        <BrandModelShowcase compact />
-        <BrandProductShowcase />
+        <BrandModelShowcase type="sunglasses" />
+        <BrandProductShowcase type="sunglasses" />
         <div className="mt-12">
           <BrandLogoGrid brands={eyewearBrandNames} context="sunglasses" includeKids />
         </div>

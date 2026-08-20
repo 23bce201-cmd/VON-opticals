@@ -23,13 +23,13 @@ export default function MetaGlassesSection({ compact = false }: MetaGlassesSecti
                 <p className="mt-6 max-w-xl border-l-4 border-white pl-5 text-lg font-medium leading-8 text-white/80">
                   Ray-Ban Meta and Oakley Meta bring camera capture, open-ear audio, calls, and AI assistance into frames you can actually try on, adjust, and understand before buying.
                 </p>
-                <div className="mt-8 grid gap-4 border-l-2 border-t-2 border-white sm:grid-cols-3">
+                <div className="mt-8 grid gap-3 sm:grid-cols-3">
                   {[
                     { icon: Camera, label: "Hands-free capture" },
                     { icon: Sparkles, label: "Meta AI assistant" },
                     { icon: Headphones, label: "Open-ear audio" },
                   ].map((item) => (
-                    <div key={item.label} className="-ml-0.5 -mt-0.5 border-2 border-white bg-von-blue-900 p-4 transition-all duration-200 hover:bg-von-accent hover:shadow-[0_8px_30px_rgba(255,74,28,0.3)]">
+                    <div key={item.label} className="border-2 border-white bg-von-blue-900 p-4 transition-all duration-200 hover:bg-von-accent hover:shadow-[0_8px_30px_rgba(255,74,28,0.3)]">
                       <item.icon size={22} strokeWidth={2.5} />
                       <p className="mt-3 text-xs font-black uppercase leading-5 tracking-[0.14em] text-white">{item.label}</p>
                     </div>

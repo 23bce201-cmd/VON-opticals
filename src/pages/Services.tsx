@@ -13,7 +13,7 @@ import {
   Wrench,
 } from "lucide-react";
 import Reveal from "../components/Reveal";
-import eyeTestImage from "../photos/shop/eyetest machine.jpg";
+import eyeTestImage from "../photos/shop/eyetest machine.webp";
 
 const coreServices = [
   {
@@ -93,9 +93,9 @@ export default function Services() {
           </div>
 
           {/* Core Services Grid */}
-          <div className="mt-14 grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-3">
+          <div className="mt-14 grid gap-4 md:grid-cols-3">
             {coreServices.map((service, index) => (
-              <Reveal key={service.title} delay={index * 90} className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-accent hover:text-white">
+              <Reveal key={service.title} delay={index * 90} className="group border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-accent hover:text-white">
                 <service.icon className="text-von-blue-900 transition-colors group-hover:text-white" size={30} strokeWidth={2.3} />
                 <p className="mt-6 swiss-number group-hover:text-white">0{index + 1}. Service</p>
                 <h2 className="mt-3 font-display text-3xl font-black uppercase leading-tight text-current">{service.title}</h2>
@@ -121,9 +121,9 @@ export default function Services() {
             </Reveal>
 
             {/* Photochromic & Tinting Feature Grid */}
-            <div className="grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {photochromicFeatures.map((item, index) => (
-                <Reveal key={item.title} delay={index * 70} className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white">
+                <Reveal key={item.title} delay={index * 70} className="group border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white">
                   <div className="flex items-center justify-between">
                     <item.icon size={28} className="text-von-blue-900 transition-colors group-hover:text-white" strokeWidth={2.3} />
                     <span className="border border-von-blue-900/30 bg-von-mist px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-von-blue-900 group-hover:border-white/40 group-hover:bg-white/10 group-hover:text-white">

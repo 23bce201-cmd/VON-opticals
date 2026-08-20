@@ -166,12 +166,12 @@ export default function MetaGlasses() {
               </p>
             </Reveal>
 
-            <div className="grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {smartFeatures.map((feature, index) => (
                 <Reveal
                   key={feature.title}
                   delay={index * 60}
-                  className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white"
+                  className="group border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white"
                 >
                   <div className="flex items-center justify-between">
                     <feature.icon className="text-von-blue-900 transition-colors duration-200 group-hover:text-white" size={28} strokeWidth={2.3} />

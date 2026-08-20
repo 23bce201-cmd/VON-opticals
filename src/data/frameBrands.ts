@@ -1,6 +1,6 @@
 export type FrameBrand = {
   name: string;
-  category: "Designer & Fashion" | "Sport & Performance" | "Icons";
+  category: "Designer & Fashion" | "Sport & Performance";
   tagline: string;
 };
 
@@ -26,7 +26,6 @@ export const frameBrands: FrameBrand[] = [
   { name: "Bolon", category: "Designer & Fashion", tagline: "Fashion-forward eyewear with clean modern proportions." },
   { name: "IC Berlin", category: "Designer & Fashion", tagline: "Lightweight German engineering with screwless frame detailing." },
   { name: "Boss", category: "Designer & Fashion", tagline: "Sharp business styling with confident daily comfort." },
-  { name: "Charriol", category: "Designer & Fashion", tagline: "Jewellery-inspired eyewear with polished luxury detail." },
   { name: "Jimmy Choo", category: "Designer & Fashion", tagline: "Glamorous fashion frames with elevated finishing." },
   { name: "Vogue", category: "Designer & Fashion", tagline: "Expressive, wearable frames for everyday fashion." },
   { name: "Kador", category: "Designer & Fashion", tagline: "Italian frame styling with distinctive optical character." },
@@ -51,10 +50,10 @@ export const frameBrands: FrameBrand[] = [
   { name: "Oakley", category: "Sport & Performance", tagline: "Sport performance frames with durable lens geometry." },
   { name: "Carrera", category: "Sport & Performance", tagline: "Racing-inspired shapes with bold lightweight comfort." },
   { name: "Maui Jim", category: "Sport & Performance", tagline: "Polarized sun lenses tuned for outdoor clarity." },
-  { name: "Hublot", category: "Icons", tagline: "Watch-house eyewear with technical luxury cues." },
+  { name: "Hublot", category: "Designer & Fashion", tagline: "Watch-house eyewear with technical luxury cues." },
 ];
 
-export const frameBrandCategories = ["Designer & Fashion", "Sport & Performance", "Icons"] as const;
+export const frameBrandCategories = ["Designer & Fashion", "Sport & Performance"] as const;
 
 export const eyewearBrandNames = [
   "Prada",
@@ -83,7 +82,6 @@ export const eyewearBrandNames = [
   "Bolon",
   "IC Berlin",
   "Boss",
-  "Charriol",
   "Jimmy Choo",
   "Vogue",
   "Kador",

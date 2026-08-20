@@ -2,13 +2,17 @@ import { useMemo, useState } from "react";
 import Reveal from "../components/Reveal";
 import { getGalleryImages } from "../data/galleryAssets";
 import businessCardImage from "../photos/shop/business card.jpeg";
-import eyeTestImage from "../photos/shop/eyetest machine.jpg";
 import opticalShopImage from "../photos/shop/optical shop.jpeg";
 import shop1Image from "../photos/shop/shop1.jpeg";
 import shop2Image from "../photos/shop/shop2.jpeg";
 import shop3Image from "../photos/shop/shop3.jpeg";
 import shop4Image from "../photos/shop/shop4.jpeg";
 import shop5Image from "../photos/shop/shop5.jpg";
+import shop6Image from "../photos/shop/shop6.jpeg";
+import shop7Image from "../photos/shop/shop7.jpeg";
+import eyetestMachineImage from "../photos/shop/eyetest machine.webp";
+import shop9Image from "../photos/shop/shop9.jpeg";
+import shop10Image from "../photos/shop/shop10.jpeg";
 import shopImage from "../photos/shop/shop.jpeg";
 
 const shopFloorImages = [
@@ -18,8 +22,12 @@ const shopFloorImages = [
   { image: shop3Image, label: "The eyewear wall" },
   { image: shop4Image, label: "On the shelves" },
   { image: shop5Image, label: "Store detail" },
+  { image: shop6Image, label: "Brand collection" },
+  { image: shop7Image, label: "Designer frames section" },
+  { image: eyetestMachineImage, label: "Eye testing equipment" },
+  { image: shop9Image, label: "Store interior" },
+  { image: shop10Image, label: "The display counter" },
   { image: opticalShopImage, label: "VON Optical, Ambawadi" },
-  { image: eyeTestImage, label: "Computerised eye test" },
   { image: businessCardImage, label: "Find our card" },
 ];
 

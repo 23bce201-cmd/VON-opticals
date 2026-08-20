@@ -36,9 +36,9 @@ export default function WhyVon() {
             copy="The experience is deliberately calm: no rushed dispensing, no vague lens promises, and no pressure to choose a frame before the prescription and fit make sense."
             align="center"
           />
-          <div className="mt-12 grid gap-4 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {values.map((value, index) => (
-              <Reveal key={value.title} delay={index * 90} className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-von-mist p-6 transition-all duration-200 hover:bg-von-accent hover:text-white hover:shadow-[0_12px_40px_rgba(255,74,28,0.3)] hover:-translate-y-1">
+              <Reveal key={value.title} delay={index * 90} className="group border-2 border-von-blue-900 bg-von-mist p-6 transition-all duration-200 hover:bg-von-accent hover:text-white hover:shadow-[0_12px_40px_rgba(255,74,28,0.3)] hover:-translate-y-1">
                 <span className="inline-flex h-14 w-14 items-center justify-center border-2 border-von-blue-900 bg-white text-von-blue-900 group-hover:border-white transition-all duration-200">
                   <value.icon size={22} strokeWidth={2.5} />
                 </span>

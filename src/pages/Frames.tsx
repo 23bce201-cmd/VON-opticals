@@ -6,7 +6,7 @@ import BrandProductShowcase from "../components/BrandProductShowcase";
 import CategoryTabs from "../components/CategoryTabs";
 import Reveal from "../components/Reveal";
 import { eyewearBrandNames, frameBrands } from "../data/frameBrands";
-import shop2Image from "../photos/shop/shop1.jpeg";
+import shop3Image from "../photos/shop/shop3.jpeg";
 
 export default function Frames() {
   const [searchParams] = useSearchParams();
@@ -31,12 +31,14 @@ export default function Frames() {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <img src={shop2Image} alt="VON Optical frame display" className="w-full max-h-[560px] border-4 border-von-blue-900 bg-white object-contain p-3 " />
+            <div className="border-4 border-von-blue-900 bg-white p-2">
+              <img src={shop3Image} alt="VON Optical frame display" className="w-full h-auto max-h-[580px] object-contain" />
+            </div>
           </Reveal>
         </div>
 
-        <BrandModelShowcase />
-        <BrandProductShowcase />
+        <BrandModelShowcase type="frames" />
+        <BrandProductShowcase type="frames" />
 
         <div className="mt-8">
           <CategoryTabs active={selectedBrand ? "All" : activeCategory} onChange={setActiveCategory} />

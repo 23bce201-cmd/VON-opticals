@@ -1,40 +1,59 @@
+import modelArmaniFrame from "../photos/models/model_armani_frame.jpg";
 import modelBalmain from "../photos/models/model_balmain.jpg";
+import modelBvlgariFrame from "../photos/models/model_bvlgari_frame.avif";
 import modelCarrera from "../photos/models/model_carrera.jpg";
-import modelChloe from "../photos/models/model_chloe.jpg";
+import modelCartierFrame from "../photos/models/model_cartier_frame.webp";
+import modelCoachFrame from "../photos/models/model_coach_frame.jpg";
 import modelDita from "../photos/models/model_dita.jpg";
 import modelGucci from "../photos/models/model_gucci.jpg";
+import modelGucciFrame from "../photos/models/model_gucci_frame.jpg";
 import modelOakley from "../photos/models/model_oakley.jpg";
 import modelPersol from "../photos/models/model_persol.jpg";
-import modelPrada from "../photos/models/model_prada.jpg";
-import modelRayBan from "../photos/models/model_rayban.jpg";
-import modelSaintLaurent from "../photos/models/model_saintlaurent.jpg";
-import modelTomFord from "../photos/models/model_tomford.jpg";
+import modelPersolFrame from "../photos/models/model_persol_frame.webp";
+import modelPrada from "../photos/models/model_prada.avif";
+import modelPradaFrame from "../photos/models/model_prada_frame.jpg";
+import modelRayBan from "../photos/models/model_rayban.webp";
+import modelRayBanFrame from "../photos/models/model_rayban_frame.jpg";
+import modelSaintLaurent from "../photos/models/model_saintlaurent.avif";
+import modelSilhouetteFrame from "../photos/models/model_silhouette_frames.jpg";
+import modelTomFordFrame from "../photos/models/model_tomford_frame.jpg";
 import modelVersace from "../photos/models/model_versace.jpg";
-import modelVogue from "../photos/models/model_vogue.jpg";
 import Reveal from "./Reveal";
 
-const modelBrands = [
+const frameBrandModels = [
+  { brand: "Armani", image: modelArmaniFrame, line: "Italian precision eyewear" },
+  { brand: "Bvlgari", image: modelBvlgariFrame, line: "Luxury Italian craftsmanship" },
+  { brand: "Cartier", image: modelCartierFrame, line: "Timeless French elegance" },
+  { brand: "Coach", image: modelCoachFrame, line: "Modern American style" },
+  { brand: "Gucci", image: modelGucciFrame, line: "Luxury fashion frames" },
+  { brand: "Persol", image: modelPersolFrame, line: "Italian eyewear heritage" },
+  { brand: "Prada", image: modelPradaFrame, line: "Architectural Italian opticals" },
+  { brand: "Ray-Ban", image: modelRayBanFrame, line: "Iconic optical frames" },
+  { brand: "Silhouette", image: modelSilhouetteFrame, line: "Featherlight Austrian frames" },
+  { brand: "Tom Ford", image: modelTomFordFrame, line: "Signature luxury silhouettes" },
+];
+
+const sunglassBrandModels = [
   { brand: "Gucci", image: modelGucci, line: "Luxury fashion frames" },
   { brand: "Prada", image: modelPrada, line: "Architectural Italian opticals" },
   { brand: "Ray-Ban", image: modelRayBan, line: "Iconic sun and optical styles" },
   { brand: "Oakley", image: modelOakley, line: "Performance eyewear geometry" },
-  { brand: "Tom Ford", image: modelTomFord, line: "Signature luxury silhouettes" },
   { brand: "DITA", image: modelDita, line: "Collector-grade craftsmanship" },
   { brand: "Persol", image: modelPersol, line: "Italian eyewear heritage" },
   { brand: "Saint Laurent", image: modelSaintLaurent, line: "Parisian statement frames" },
   { brand: "Carrera", image: modelCarrera, line: "Racing-inspired sunglasses" },
   { brand: "Versace", image: modelVersace, line: "Bold Italian glamour" },
-  { brand: "Vogue", image: modelVogue, line: "Everyday fashion eyewear" },
-  { brand: "Chloe", image: modelChloe, line: "Effortless Parisian chic" },
   { brand: "Balmain", image: modelBalmain, line: "Architectural luxury shapes" },
 ];
 
 type BrandModelShowcaseProps = {
   compact?: boolean;
+  type?: "sunglasses" | "frames";
 };
 
-export default function BrandModelShowcase({ compact = false }: BrandModelShowcaseProps) {
-  const visibleBrands = compact ? modelBrands.slice(0, 6) : modelBrands;
+export default function BrandModelShowcase({ compact = false, type = "sunglasses" }: BrandModelShowcaseProps) {
+  const modelBrands = type === "frames" ? frameBrandModels : sunglassBrandModels;
+  const visibleBrands = compact ? modelBrands.slice(0, 5) : modelBrands;
 
   return (
     <Reveal className="mt-12 border-4 border-von-blue-900 bg-white">
@@ -47,11 +66,11 @@ export default function BrandModelShowcase({ compact = false }: BrandModelShowca
           The houses that define eyewear — worn the way they were designed, from the runway to our walls.
         </p>
       </div>
-      <div className="grid gap-4 border-l-2 border-t-2 border-von-blue-900 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {visibleBrands.map((item, index) => (
           <article key={item.brand} className="group border-2 border-von-blue-900 bg-white overflow-hidden transition-all duration-200 hover:shadow-[0_12px_40px_rgba(37,58,121,0.15)] hover:-translate-y-1">
             <div className="relative aspect-[4/5] overflow-hidden bg-von-mist">
-              <img src={item.image} alt={`${item.brand} eyewear model`} className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105" />
+              <img src={item.image} alt={`${item.brand} eyewear model`} className="w-full h-full object-cover object-top transition-all duration-300 group-hover:scale-105" />
               <span className="absolute left-4 top-4 bg-von-accent px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
                 {String(index + 1).padStart(2, "0")}
               </span>

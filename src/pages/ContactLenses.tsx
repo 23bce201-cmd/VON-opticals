@@ -103,13 +103,13 @@ export default function ContactLenses() {
             </Reveal>
 
             {/* Quick Metrics */}
-            <div className="mt-12 grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-3">
+            <div className="mt-12 grid gap-4 md:grid-cols-3">
               {[
                 { icon: Eye, label: "Crisp Peripheral Vision", note: "No spectacle edge distortion" },
                 { icon: Waves, label: "Hydration & Oxygen", note: "Breathable Silicone Hydrogel" },
                 { icon: Timer, label: "Safe Wear Schedules", note: "Daily, Bi-weekly & Monthly" },
               ].map((item, index) => (
-                <Reveal key={item.label} delay={index * 90} className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-von-mist p-6 transition duration-200 hover:bg-von-accent hover:text-white">
+                <Reveal key={item.label} delay={index * 90} className="group border-2 border-von-blue-900 bg-von-mist p-6 transition duration-200 hover:bg-von-accent hover:text-white">
                   <item.icon className="text-von-blue-900 transition-colors group-hover:text-white" size={28} strokeWidth={2.5} />
                   <p className="mt-5 swiss-number group-hover:text-white">0{index + 1}. Advantage</p>
                   <h2 className="mt-2 font-display text-2xl font-black uppercase leading-tight text-current">{item.label}</h2>
@@ -138,12 +138,12 @@ export default function ContactLenses() {
               </p>
             </Reveal>
 
-            <div className="grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {howLensesWork.map((item, index) => (
                 <Reveal
                   key={item.title}
                   delay={index * 80}
-                  className="group -ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white"
+                  className="group border-2 border-von-blue-900 bg-white p-6 transition duration-200 hover:bg-von-blue-900 hover:text-white"
                 >
                   <item.icon className="text-von-blue-900 transition-colors group-hover:text-white" size={30} strokeWidth={2.2} />
                   <p className="mt-5 swiss-number group-hover:text-white">0{index + 1}. Science</p>
@@ -266,9 +266,9 @@ export default function ContactLenses() {
               <p className="swiss-label">04. The VON Optical Process</p>
               <h2 className="section-title">Our Contact Lens Fitting Method</h2>
             </Reveal>
-            <div className="grid gap-0 border-l-2 border-t-2 border-von-blue-900 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-3">
               {fittingSteps.map((step, index) => (
-                <Reveal key={step.title} delay={index * 90} className="-ml-0.5 -mt-0.5 border-2 border-von-blue-900 bg-white p-6">
+                <Reveal key={step.title} delay={index * 90} className="border-2 border-von-blue-900 bg-white p-6">
                   <p className="swiss-number">Step 0{index + 1}</p>
                   <h3 className="mt-3 font-display text-2xl font-black uppercase leading-none text-von-blue-900">{step.title}</h3>
                   <p className="mt-4 text-sm font-medium leading-6 text-von-blue-900/75">{step.copy}</p>

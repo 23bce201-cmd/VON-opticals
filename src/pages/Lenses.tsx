@@ -25,9 +25,9 @@ export default function Lenses() {
               </p>
             </Reveal>
             <Reveal delay={120} className="border-4 border-von-blue-900 bg-von-mist p-6 swiss-diagonal">
-              <div className="grid gap-0 border-l-2 border-t-2 border-von-blue-900 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {lensServices.map((service) => (
-                  <p key={service} className="-ml-0.5 -mt-0.5 flex gap-3 border-2 border-von-blue-900 bg-white p-4 text-sm font-bold leading-6 text-von-blue-900/70">
+                  <p key={service} className="flex gap-3 border-2 border-von-blue-900 bg-white p-4 text-sm font-bold leading-6 text-von-blue-900/70">
                     <CheckCircle2 className="mt-1 shrink-0 text-von-accent" size={18} strokeWidth={2.5} />
                     {service}
                   </p>
